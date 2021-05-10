@@ -1,5 +1,3 @@
-import { levels } from '../../assets/shadows'
-
 export default (theme) => ({
     header: {
         backgroundColor: '#fff',

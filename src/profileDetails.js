@@ -37,4 +37,50 @@ export const SocialMediaDetails = {
     },
 }
 
-export const EducationDetails = {}
+export const EducationDetails = {
+    enable: true,
+    schools: [
+        {
+            name: 'SASTRA University',
+            imageUrl: '/assets/images/SASTRA.png',
+            imageTitle: 'SASTRA University',
+            degree: "Bachelor's in Computer Science",
+            years: '2015-2019',
+            score: '8.89/10 CGPA',
+        },
+        {
+            name: 'NC State University',
+            imageUrl: '/assets/images/nc-state.png',
+            imageTitle: 'NC State University',
+            degree: "Master's in Computer Science",
+            years: '2021-Present',
+            score: '-',
+        },
+    ],
+}
+
+export const WorkExperienceDetails = {
+    enable: true,
+    experience: [
+        {
+            name: 'PayPal',
+            role: 'Software Engineer',
+            logo: '/assets/images/paypal.jpg',
+            timeline: 'June 2018 – Present',
+            desc: [
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            ],
+        },
+        {
+            name: 'PayPal',
+            role: 'Software Engineer',
+            logo: '/assets/images/paypal.png',
+            timeline: 'June 2018 – Present',
+            desc: [
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            ],
+        },
+    ],
+}
