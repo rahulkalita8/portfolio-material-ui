@@ -1,6 +1,6 @@
 export default (theme) => ({
     card: {
-        padding: '5px 10px',
+        padding: '0.5rem 1rem',
         display: 'flex',
         flexDirection: 'row',
         '&.hover': {

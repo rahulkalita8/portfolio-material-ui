@@ -3,26 +3,33 @@ export default (theme) => ({
         width: '100%',
         height: '100%',
         overflow: 'auto',
-        padding: '20px 10px',
+        padding: '1.25rem 0.8rem',
         margin: '0px auto',
-        background: '#348f50' /* fallback for old browsers */,
-        background: 'linear-gradient(to right, #348f50, #56b4d3)',
+        // background: 'linear-gradient(to right, #348f50, #56b4d3)',
+        display: 'flex',
     },
+    main__div: {
+        alignSelf: 'center',
+        position: 'relative',
+        top: '1rem',
+    },
+    main__animation: {
+        flex: '1 1',
+        alignSelf: 'center',
+    },
+
     typographyH1: {
-        width: '90%',
-        padding: '20px 10px',
+        padding: '1.25rem 0.8rem',
         margin: '0px auto',
-        marginTop: '20rem',
         color: '#000',
-        fontSize: '10rem',
-        fontFamily: 'OpenSans',
-        paddingBottom: '10px',
+        fontSize: '5rem',
+        paddingBottom: '1rem',
     },
 
     typographyBody1: {
-        width: '90%',
-        margin: '0px auto',
+        margin: '0',
         fontSize: '2rem',
+        padding: '0 1rem',
     },
 
     subTitle: {
@@ -33,13 +40,13 @@ export default (theme) => ({
         display: 'flex',
         '>*': {
             flex: '1',
-            marginBottom: '30px',
+            marginBottom: '2rem',
         },
     },
 
     buttonGreetingDiv: {
         display: 'flex',
-        marginTop: '20px',
+        marginTop: '1 rem',
     },
 
     greetingText: {
@@ -49,8 +56,8 @@ export default (theme) => ({
     },
 
     greetingTextP: {
-        fontSize: '30px',
-        lineHeight: '40px',
+        fontSize: '2rem',
+        lineHeight: '2.5rem',
     },
 
     greetingImageDiv: {
