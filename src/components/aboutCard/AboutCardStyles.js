@@ -1,69 +1,51 @@
 export default (theme) => ({
-    main: {
-        width: '100%',
-        height: '100%',
-        overflow: 'auto',
-        padding: '1.25rem 0.8rem',
-        margin: '0px auto',
-        // background: 'linear-gradient(to right, #348f50, #56b4d3)',
+    aboutMain: {
+        width: '100vw',
+        height: '100vh',
         display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        margin: 'auto',
+        [theme.breakpoints.up('md')]: {
+            flexDirection: 'row',
+        },
     },
-    main__div: {
-        alignSelf: 'center',
-        position: 'relative',
-        top: '1rem',
+    aboutDetails: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        // [theme.breakpoints.up('md')]: {
+        flexBasis: '0',
+        flexGrow: '1',
+        // },
     },
     main__animation: {
-        flex: '1 1',
-        alignSelf: 'center',
+        minWidth: '300px',
+        flexBasis: '0',
+        flexGrow: '1',
+        // [theme.breakpoints.up('md')]: {
+        // flex: '1 0 0',
+        // },
     },
 
     typographyH1: {
-        padding: '1.25rem 0.8rem',
-        margin: '0px auto',
-        color: '#000',
-        fontSize: '5rem',
         paddingBottom: '1rem',
+        fontSize: '3rem',
+        fontFamily: 'Montserrat',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '5rem',
+        },
     },
 
     typographyBody1: {
         margin: '0',
-        fontSize: '2rem',
         padding: '0 1rem',
-    },
-
-    subTitle: {
-        color: '#868e96 !important',
-    },
-
-    greetingMain: {
-        display: 'flex',
-        '>*': {
-            flex: '1',
-            marginBottom: '2rem',
-        },
-    },
-
-    buttonGreetingDiv: {
-        display: 'flex',
-        marginTop: '1 rem',
-    },
-
-    greetingText: {
-        fontSize: '70px',
-        lineHeight: '11',
-        color: 'black !important',
-    },
-
-    greetingTextP: {
-        fontSize: '2rem',
-        lineHeight: '2.5rem',
-    },
-
-    greetingImageDiv: {
-        img: {
-            maxWidth: '100%',
-            height: 'auto',
+        fontSize: '1rem',
+        fontFamily: 'Montserrat',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '2rem',
         },
     },
 })
