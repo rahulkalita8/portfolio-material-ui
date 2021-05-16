@@ -1,33 +1,40 @@
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import React from 'react'
 import { Paper, Typography } from '@material-ui/core'
 import EducationCard from '../../components/educationCard/EducationCard'
 import { EducationDetails } from '../../profileDetails'
 
-const useStyles = makeStyles((theme) => ({}))
+import theme from './EducationStyle'
+
+const useStyles = makeStyles(theme)
 
 export default function Education() {
     const classes = useStyles()
 
     return (
-        <Paper>
+        <div className={classes.educationRoot} id="Education">
             {EducationDetails.enable && (
-                <Paper>
-                    <Typography variant="h3">Education</Typography>
-                    {EducationDetails.schools.map((school) => {
-                        return (
-                            <EducationCard
-                                imageUrl={school.imageUrl}
-                                imageTitle={school.imageTitle}
-                                name={school.name}
-                                degree={school.degree}
-                                years={school.years}
-                                score={school.score}
-                            />
-                        )
-                    })}
-                </Paper>
+                <div className={classes.educationRoot}>
+                    <Typography className={classes.educationRootLabel}>
+                        Education
+                    </Typography>
+                    <div className={classes.educationLists}>
+                        {EducationDetails.schools.map((school) => {
+                            return (
+                                <EducationCard
+                                    imageUrl={school.imageUrl}
+                                    imageTitle={school.imageTitle}
+                                    name={school.name}
+                                    degree={school.degree}
+                                    years={school.years}
+                                    grade={school.grade}
+                                    details={school.details}
+                                />
+                            )
+                        })}
+                    </div>
+                </div>
             )}
-        </Paper>
+        </div>
     )
 }
