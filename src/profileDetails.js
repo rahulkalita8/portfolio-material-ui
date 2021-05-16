@@ -84,7 +84,7 @@ const EducationDetails = {
     ],
 }
 
-const WorkExperienceDetails = {
+const WorkExperienceDetailsDemo = {
     enable: true,
     experience: [
         {
@@ -109,6 +109,65 @@ const WorkExperienceDetails = {
             details: [
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            ],
+        },
+    ],
+}
+
+const WorkExperienceDetails = {
+    enable: true,
+    experience: [
+        {
+            name: 'PayPal',
+            logo: '/assets/images/paypal-transparent.png',
+            allDetails: [
+                {
+                    role: 'Software Engineer 2',
+                    timeline: 'Apr 2021 - Present',
+                    description:
+                        'DMPNG. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                    // 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                    details: [
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                    ],
+                },
+                {
+                    role: 'Software Engineer 1',
+                    timeline: 'Jul 2019 - Mar 2021',
+                    description: 'DIAS and CDH',
+                    // 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                    details: [
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                    ],
+                },
+                {
+                    role: 'Software Engineering Intern',
+                    timeline: 'Jan 2019 - Jun 2019',
+                    description: 'Intern at PayPal. Did SSOT',
+                    // 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                    details: [
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                    ],
+                },
+            ],
+        },
+        {
+            name: 'Tata Consultancy Services',
+            logo: '/assets/images/tcs-logo.png',
+            allDetails: [
+                {
+                    role: 'Software Engineering Intern',
+                    timeline: 'May 2018 - Jul 2018',
+                    description: '',
+                    // 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                    details: [
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+                    ],
+                },
             ],
         },
     ],
@@ -146,7 +205,7 @@ const AcheivementDetails = {
         },
         {
             name: 'Applied Machine Learning: Algorithms',
-            imageUrl: '/assets/images/linkedin-round-transparent.png',
+            imageUrl: '/assets/images/linkedin-name.png',
             organization: 'LinkedIn',
             date: 'Jan 2021',
             details: '',
@@ -167,7 +226,7 @@ const LicenseCertificateDetails = {
         },
         {
             name: 'Applied Machine Learning: Algorithms',
-            imageUrl: '/assets/images/linkedin-logo.png',
+            imageUrl: '/assets/images/linkedin-name.png',
             organization: 'LinkedIn',
             issueDate: 'Jan 2021',
             url: '',
@@ -203,4 +262,5 @@ export {
     LicenseCertificateDetails,
     ProjectDetails,
     ContactDetails,
+    WorkExperienceDetailsDemo,
 }

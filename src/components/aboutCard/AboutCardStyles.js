@@ -2,32 +2,33 @@ export default (theme) => ({
     aboutMain: {
         width: '100vw',
         height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
+        // display: 'flex',
+        // flexDirection: 'column',
+        // alignItems: 'center',
+        // justifyContent: 'flex-end',
+        backgroundImage: 'url(/assets/images/about-background4.jpg)',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
         margin: 'auto',
         [theme.breakpoints.up('md')]: {
-            flexDirection: 'row',
+            // flexDirection: 'row',
         },
     },
     aboutDetails: {
+        height: '100vh',
+        margin: 'auto',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        // [theme.breakpoints.up('md')]: {
         flexBasis: '0',
         flexGrow: '1',
-        // },
     },
     main__animation: {
         minWidth: '300px',
         flexBasis: '0',
         flexGrow: '1',
-        // [theme.breakpoints.up('md')]: {
-        // flex: '1 0 0',
-        // },
     },
 
     typographyH1: {

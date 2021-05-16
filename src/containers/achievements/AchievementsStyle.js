@@ -1,13 +1,11 @@
 export default (theme) => ({
-    achievementBorder: {
-        border: '2px solid rgba(211, 211, 211, 0.397)',
-        width: '90%',
-        opacity: '1',
-    },
     achievementRoot: {
-        margin: '10px',
+        padding: '10px',
+        background: 'rgb(116,211,226)',
+        background:
+            'linear-gradient(173deg, rgba(232,239,240,0.2539390756302521) 60%, rgba(255,255,255,1) 60%)',
         [theme.breakpoints.up('md')]: {
-            margin: '2rem',
+            padding: '2rem',
         },
     },
     achievementRootLabel: {
@@ -23,4 +21,5 @@ export default (theme) => ({
         gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr));',
         gridGap: '1rem 1rem',
     },
+    
 })

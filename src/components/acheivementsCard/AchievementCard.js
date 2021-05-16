@@ -45,6 +45,7 @@ export default function AchievementCard(props) {
                                     href={link.url}
                                     blank="_target"
                                     rel="noopener noreferrer"
+                                    className={classes.achievementButton}
                                 >
                                     {link.name}
                                 </Button>

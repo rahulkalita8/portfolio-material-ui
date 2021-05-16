@@ -14,7 +14,7 @@ export default function Experience() {
     return (
         <div className={classes.experienceRoot} id="Experience">
             {WorkExperienceDetails.enable && (
-                <div className={classes.experienceRoot}>
+                <div>
                     <Typography className={classes.experienceRootLabel}>
                         Work Experience
                     </Typography>
@@ -24,10 +24,7 @@ export default function Experience() {
                                 <ExperienceCard
                                     logo={company.logo}
                                     name={company.name}
-                                    role={company.role}
-                                    timeline={company.timeline}
-                                    description={company.description}
-                                    details={company.details}
+                                    allDetails={company.allDetails}
                                 />
                             )
                         })}

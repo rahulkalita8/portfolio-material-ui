@@ -70,7 +70,7 @@ export default function PrimarySearchAppBar(props) {
 
     return (
         <div className={classes.grow}>
-            <AppBar position="static" color="#FFF">
+            <AppBar position="static" color="transparent">
                 <Toolbar className={classes.toolbar}>
                     <IconButton
                         edge="start"

@@ -1,8 +1,14 @@
 export default (theme) => ({
     educationRoot: {
-        margin: '10px',
+        padding: '2rem',
+        boxSizing: 'border-box',
+        backgroundImage:
+            'linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),url(/assets/images/education-background4.jpg)',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
         [theme.breakpoints.up('md')]: {
-            margin: '2rem',
+            minHeight: '100vh',
         },
     },
     educationRootLabel: {
