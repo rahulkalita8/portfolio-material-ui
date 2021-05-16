@@ -1,4 +1,22 @@
-export const SocialMediaDetails = {
+const TechStack = {
+    enable: true,
+    tech: [
+        {
+            name: 'Python',
+            level: 8,
+        },
+        {
+            name: 'Java',
+            level: 9,
+        },
+        {
+            name: 'InfluxDB',
+            level: 7,
+        },
+    ],
+}
+
+const SocialMediaDetails = {
     facebook: {
         enable: true,
         url: 'https://www.facebook.com/rahul.kalita.98',
@@ -37,7 +55,7 @@ export const SocialMediaDetails = {
     },
 }
 
-export const EducationDetails = {
+const EducationDetails = {
     enable: true,
     schools: [
         {
@@ -46,7 +64,8 @@ export const EducationDetails = {
             imageTitle: 'SASTRA University',
             degree: "Bachelor's in Computer Science",
             years: '2015-2019',
-            score: '8.89/10 CGPA',
+            grade: '8.89/10 CGPA',
+            details: '',
         },
         {
             name: 'NC State University',
@@ -54,12 +73,13 @@ export const EducationDetails = {
             imageTitle: 'NC State University',
             degree: "Master's in Computer Science",
             years: '2021-Present',
-            score: '-',
+            grade: '-',
+            details: '',
         },
     ],
 }
 
-export const WorkExperienceDetails = {
+const WorkExperienceDetails = {
     enable: true,
     experience: [
         {
@@ -83,4 +103,74 @@ export const WorkExperienceDetails = {
             ],
         },
     ],
+}
+
+const AcheivementDetails = {
+    enable: true,
+    acheivements: [
+        {
+            name: 'KLA Tencor',
+            type: 'Overnight Hackathon',
+            imageUrl: '/assets/images/kla-tencor-logo.png',
+            details: 'Organized by something blah blah blah',
+            date: '29/01/2021',
+            usefulLinks: [
+                { name: 'Certificate', url: 'https://facebook.com' },
+                {
+                    name: 'Letter',
+                    url: 'https://facebook.com',
+                },
+            ],
+        },
+    ],
+}
+
+const LicenseCertificateDetails = {
+    enable: true,
+    certificates: [
+        {
+            name: 'Neural Networks and Deep Learning',
+            imageUrl: '/assets/images/coursera-logo.png',
+            organization: 'Coursera',
+            issueDate: 'Jan 2021',
+            url: 'https://coursera.org/share/447d5a0475fac24a23fcdf12650e1725',
+        },
+        {
+            name: 'Applied Machine Learning: Algorithms',
+            imageUrl: '/assets/images/linkedin-logo.png',
+            organization: 'LinkedIn',
+            issueDate: 'Jan 2021',
+            url: '',
+        },
+    ],
+}
+
+const ProjectDetails = {
+    enable: true,
+    projects: [
+        {
+            name:
+                'Collaborative Recommendation System Examining Serendipitous Items',
+            date: 'Aug 2018 - Oct 2018',
+            imageUrl: '',
+            url: '',
+            details: ';jahgufyudsdoiugf oiguifyghcig ouiyfudghgkh',
+        },
+    ],
+}
+
+const ContactDetails = {
+    name: 'Rahul Kalita',
+    description: '',
+    email: ['example1gmail.com', 'example2@gmail.com'],
+}
+
+export {
+    TechStack,
+    SocialMediaDetails,
+    EducationDetails,
+    WorkExperienceDetails,
+    AcheivementDetails,
+    LicenseCertificateDetails,
+    ProjectDetails,
 }

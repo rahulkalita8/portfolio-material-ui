@@ -6,7 +6,7 @@ code {
 @font-face {
     font-family: 'OpenSans';
     src: local('OpenSans'),
-        url('./assets/fonts/OpenSans-Regular.ttf') format('woff');
+        url('./resources/fonts/OpenSans-Regular.ttf') format('woff');
     font-display: swap;
 }
 

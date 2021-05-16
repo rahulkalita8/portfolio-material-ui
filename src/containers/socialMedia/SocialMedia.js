@@ -49,7 +49,6 @@ function getEnabledSocialMedia() {
         if (SocialMediaDetails[key].enable)
             socialMediaDict[key] = SocialMediaDetails[key]
     }
-    console.log(socialMediaDict)
     return socialMediaDict
 }
 

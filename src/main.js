@@ -4,6 +4,9 @@ import AboutCard from './components/aboutCard/AboutCard'
 import Education from './containers/education/Education'
 import Header from './components/Header/Header'
 import Experience from './containers/experience/Experience'
+import Achievement from './containers/achievements/Achievements'
+import Certificate from './containers/certificates/Certificate'
+import Project from './containers/projects/Projects'
 
 const useStyles = makeStyles((theme) => ({
     mainDiv: {
@@ -22,6 +25,9 @@ export default function Main() {
             <AboutCard />
             <Education />
             <Experience />
+            <Achievement />
+            <Certificate />
+            <Project />
         </div>
     )
 }

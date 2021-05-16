@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/styles'
 import React from 'react'
-import { Paper } from '@material-ui/core'
+import { Paper, Typography } from '@material-ui/core'
 import ExperienceCard from '../../components/experienceCard/ExperienceCard'
 import { WorkExperienceDetails } from '../../profileDetails'
 
@@ -11,18 +11,22 @@ export default function Experience() {
 
     return (
         <Paper>
-            {WorkExperienceDetails.enable &&
-                WorkExperienceDetails.experience.map((company) => {
-                    return (
-                        <ExperienceCard
-                            logo={company.logo}
-                            name={company.name}
-                            role={company.role}
-                            timeline={company.timeline}
-                            desc={company.desc}
-                        />
-                    )
-                })}
+            {WorkExperienceDetails.enable && (
+                <Paper>
+                    <Typography variant="h3">Work Experience</Typography>
+                    {WorkExperienceDetails.experience.map((company) => {
+                        return (
+                            <ExperienceCard
+                                logo={company.logo}
+                                name={company.name}
+                                role={company.role}
+                                timeline={company.timeline}
+                                desc={company.desc}
+                            />
+                        )
+                    })}
+                </Paper>
+            )}
         </Paper>
     )
 }

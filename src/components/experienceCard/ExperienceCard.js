@@ -7,7 +7,6 @@ const useStyles = makeStyles(theme)
 
 export default function ExperienceCard(props) {
     const classes = useStyles()
-    console.log(props.logo)
     return (
         <Card className={classes.card}>
             <div className={classes.cardMedia}>

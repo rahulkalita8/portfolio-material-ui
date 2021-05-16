@@ -7,7 +7,6 @@ const useStyles = makeStyles(theme)
 
 export default function EducationCard(props) {
     const classes = useStyles()
-    console.log(props.imageUrl)
     return (
         <Card className={classes.card}>
             <div className={classes.cardMedia}>
