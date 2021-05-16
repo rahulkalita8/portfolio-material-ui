@@ -6,7 +6,9 @@ export default (theme) => ({
     experienceCard: {
         padding: '0.5rem 1rem',
         height: '100%',
+        maxWidth: '350px',
         boxSizing: 'border-box',
+        background: 'rgba(255, 255, 255, 0.2)',
         boxShadow:
             '2px 3px 8px -2px rgb(0 0 0 / 20%), 1px 1px 1px 0px rgb(0 0 0 / 14%), 1px 2px 2px 0px rgb(0 0 0 / 12%)',
         '&.hover': {
@@ -20,8 +22,8 @@ export default (theme) => ({
         margin: 'auto',
         borderRadius: '50%',
         [theme.breakpoints.up('md')]: {
-            width: '150px',
-            height: '150px',
+            width: '100px',
+            height: '100px',
         },
     },
     experienceCardMedia: {
@@ -30,8 +32,8 @@ export default (theme) => ({
         backgroundPosition: 'center',
         // backgroundSize: '100% 100%',
         [theme.breakpoints.up('md')]: {
-            width: '150px',
-            height: '150px',
+            width: '100px',
+            height: '100px',
         },
     },
     experienceCardContentRoot: {},
@@ -56,7 +58,7 @@ export default (theme) => ({
         fontWeight: 'bold',
         fontFamily: 'Montserrat',
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.5rem',
+            fontSize: '1rem',
         },
     },
     timeline: {
@@ -64,7 +66,7 @@ export default (theme) => ({
         fontWeight: 'bold',
         fontFamily: 'Montserrat',
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.5rem',
+            fontSize: '1rem',
         },
     },
     listItems: {
@@ -77,7 +79,7 @@ export default (theme) => ({
         fontSize: '0.8rem',
         fontFamily: 'Montserrat',
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.2rem',
+            fontSize: '1rem',
         },
     },
 })

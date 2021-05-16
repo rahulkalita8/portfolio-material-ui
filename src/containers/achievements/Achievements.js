@@ -14,12 +14,9 @@ export default function Achievement() {
 
     return (
         <div className={classes.achievementRoot} id="Achievements">
-            <Slide left duration={2000}>
-                <div className={classes.achievementBorder}></div>
-            </Slide>
             <Fade left duration={1000}>
                 {AcheivementDetails.enable && (
-                    <div className={classes.achievementRoot}>
+                    <div>
                         <Typography className={classes.achievementRootLabel}>
                             Achievements
                         </Typography>

@@ -9,7 +9,7 @@ export default (theme) => ({
         boxSizing: 'border-box',
         boxShadow:
             '2px 3px 8px -2px rgb(0 0 0 / 20%), 1px 1px 1px 0px rgb(0 0 0 / 14%), 1px 2px 2px 0px rgb(0 0 0 / 12%)',
-        '&.hover': {
+        '&:hover': {
             width: '100%',
             transition: 'width 0.6s ease-in-out',
         },
@@ -78,6 +78,16 @@ export default (theme) => ({
         fontFamily: 'Montserrat',
         [theme.breakpoints.up('md')]: {
             fontSize: '1.2rem',
+        },
+    },
+    achievementButton: {
+        background: 'transparent',
+        margin: '0.5rem',
+        borderRadius: '8px',
+        border: '2px solid #3d5afe',
+        '&:hover': {
+            background: '#3d5afe',
+            color: '#ffffff',
         },
     },
 })

@@ -24,13 +24,13 @@ export default function AboutCard(props) {
                 </Typography>
                 <SocialMedia />
             </div>
-            <div className={classes.main__animation}>
+            {/* <div className={classes.main__animation}>
                 <LottieAnimation
                     lottie={WorkAnimation}
                     width={300}
                     height={300}
                 />
-            </div>
+            </div> */}
         </div>
     )
 }

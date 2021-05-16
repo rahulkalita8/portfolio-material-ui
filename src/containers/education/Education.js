@@ -14,7 +14,7 @@ export default function Education() {
     return (
         <div className={classes.educationRoot} id="Education">
             {EducationDetails.enable && (
-                <div className={classes.educationRoot}>
+                <div>
                     <Typography className={classes.educationRootLabel}>
                         Education
                     </Typography>
