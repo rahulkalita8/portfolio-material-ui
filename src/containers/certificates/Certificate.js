@@ -1,37 +1,41 @@
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import React from 'react'
-import { Paper, Typography } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
 import CertificateCard from '../../components/certificateCard/CertificateCard'
 import { LicenseCertificateDetails } from '../../profileDetails'
 
-const useStyles = makeStyles((theme) => ({}))
+import theme from './CertificateStyle'
+
+const useStyles = makeStyles(theme)
 
 export default function Certificate() {
     const classes = useStyles()
 
     return (
-        <Paper>
+        <div className={classes.certificateRoot}>
             {LicenseCertificateDetails.enable && (
-                <Paper>
-                    <Typography variant="h3">
+                <div className={classes.certificateRoot}>
+                    <Typography className={classes.certificateRootLabel}>
                         License and Certificates
                     </Typography>
-                    {LicenseCertificateDetails.certificates.map(
-                        (certificate) => {
-                            return (
-                                <CertificateCard
-                                    imageUrl={certificate.imageUrl}
-                                    name={certificate.name}
-                                    organization={certificate.organization}
-                                    details={certificate.details}
-                                    date={certificate.date}
-                                    url={certificate.url}
-                                />
-                            )
-                        }
-                    )}
-                </Paper>
+                    <div className={classes.certificateLists}>
+                        {LicenseCertificateDetails.certificates.map(
+                            (certificate) => {
+                                return (
+                                    <CertificateCard
+                                        imageUrl={certificate.imageUrl}
+                                        name={certificate.name}
+                                        organization={certificate.organization}
+                                        details={certificate.details}
+                                        date={certificate.date}
+                                        url={certificate.url}
+                                    />
+                                )
+                            }
+                        )}
+                    </div>
+                </div>
             )}
-        </Paper>
+        </div>
     )
 }
