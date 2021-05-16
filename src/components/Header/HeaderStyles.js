@@ -1,28 +1,42 @@
 export default (theme) => ({
-    header: {
-        backgroundColor: '#fff',
-        position: 'fixed',
-        maxWidth: '100%',
-        padding: '0.5rem 1rem',
-        boxShadow: '0px 8px 34px -1px rgba(0,0,0,0.57);',
+    grow: {
+        flexGrow: 1,
     },
-    grid: {
-        margin: '0px auto',
-        transition: 'max-height 0.2s ease-out',
-    },
-    gridItem: {
-        display: 'block',
-        padding: '1rem 1.5rem',
-        color: 'black',
-        textDecoration: 'none',
-        '&:hover': {
-            backgroundColor: '#f4f4f4',
+    toolbar: {
+        minHeight: '48px',
+        [theme.breakpoints.up('md')]: {
+            minHeight: '56px',
         },
     },
-    /* menu */
-    menu: {
-        marginLeft: 'auto',
-        maxHeight: '0',
-        transition: 'max-height 02s ease-out',
+    menuButton: {
+        marginRight: theme.spacing(2),
+    },
+    menuTypography: {
+        padding: '0.5rem 1rem',
+        '&:hover, &:active, &:focus': {
+            background: '#f4f4f4',
+            borderRadius: '0.2rem',
+        },
+    },
+    menuTypographyLink: {
+        color: 'rgba(0, 0, 0, 0.87)',
+    },
+
+    sectionDesktop: {
+        display: 'none',
+        [theme.breakpoints.up('md')]: {
+            display: 'flex',
+        },
+    },
+    sectionMobile: {
+        display: 'flex',
+        [theme.breakpoints.up('md')]: {
+            display: 'none',
+        },
+    },
+    menuWindow: {
+        width: '100vw',
+        boxShadow: 'none',
+        borderRadius: '0',
     },
 })
