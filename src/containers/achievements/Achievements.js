@@ -1,33 +1,49 @@
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import React from 'react'
-import { Paper, Typography } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
 import AchievementCard from '../../components/acheivementsCard/AchievementCard'
 import { AcheivementDetails } from '../../profileDetails'
+import { Fade, Slide } from 'react-reveal'
 
-const useStyles = makeStyles((theme) => ({}))
+import theme from './AchievementsStyle'
+
+const useStyles = makeStyles(theme)
 
 export default function Achievement() {
     const classes = useStyles()
 
     return (
-        <Paper>
-            {AcheivementDetails.enable && (
-                <Paper>
-                    <Typography variant="h3">Achievements</Typography>
-                    {AcheivementDetails.acheivements.map((achievement) => {
-                        return (
-                            <AchievementCard
-                                imageUrl={achievement.imageUrl}
-                                type={achievement.type}
-                                name={achievement.name}
-                                details={achievement.details}
-                                date={achievement.date}
-                                usefulLinks={achievement.usefulLinks}
-                            />
-                        )
-                    })}
-                </Paper>
-            )}
-        </Paper>
+        <div className={classes.achievementRoot} id="Achievements">
+            <Slide left duration={2000}>
+                <div className={classes.achievementBorder}></div>
+            </Slide>
+            <Fade left duration={1000}>
+                {AcheivementDetails.enable && (
+                    <div className={classes.achievementRoot}>
+                        <Typography className={classes.achievementRootLabel}>
+                            Achievements
+                        </Typography>
+                        <div className={classes.achievementLists}>
+                            {AcheivementDetails.acheivements.map(
+                                (achievement, index) => {
+                                    return (
+                                        <AchievementCard
+                                            imageUrl={achievement.imageUrl}
+                                            type={achievement.type}
+                                            name={achievement.name}
+                                            details={achievement.details}
+                                            date={achievement.date}
+                                            usefulLinks={
+                                                achievement.usefulLinks
+                                            }
+                                        />
+                                    )
+                                }
+                            )}
+                        </div>
+                    </div>
+                )}
+            </Fade>
+        </div>
     )
 }
