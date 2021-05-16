@@ -1,7 +1,9 @@
 import { makeStyles } from '@material-ui/styles'
 import React from 'react'
 import AboutCard from './components/aboutCard/AboutCard'
+import Education from './containers/education/Education'
 import Header from './components/Header/Header'
+import Experience from './containers/experience/Experience'
 
 const useStyles = makeStyles((theme) => ({
     mainDiv: {
@@ -18,6 +20,8 @@ export default function Main() {
         <div className={classes.mainDiv}>
             <Header />
             <AboutCard />
+            <Education />
+            <Experience />
         </div>
     )
 }
