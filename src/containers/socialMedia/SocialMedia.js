@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { Paper } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faGoogle,
@@ -17,28 +16,32 @@ import { makeStyles } from '@material-ui/styles'
 import { SocialMediaDetails } from '../../profileDetails'
 
 const useStyles = makeStyles({
-    paper: {
-        marginLeft: 'auto',
+    socialMediaRoot: {
         padding: '5px',
-        textAlign: 'center',
         marginTop: '10px',
         backgroundColor: 'transparent',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexWrap: 'wrap',
     },
     button: {
         color: 'white',
-        padding: '0.8rem',
-        borderRadius: '2.6rem',
+        padding: '0.5rem',
+        borderRadius: '50%',
         cursor: 'pointer',
-        display: 'inline-block',
         fontSize: '2rem',
-        // height: '2.6rem',
-        lineHeight: '2.6rem',
-        margin: '0 5px',
-        marginBottom: '10px',
-        position: 'relative',
-        textAlign: 'center',
+        minWidth: '2rem',
+        // maxWidth: '4rem',
+        margin: '0.5rem',
+        // fontSize: '2rem',
+        // lineHeight: '2.6rem',
+        // margin: '0 5px',
+        // marginBottom: '10px',
+        // textAlign: 'center',
         // width: '2.6rem',
-        marginBottom: '10px',
+        // marginBottom: '10px',
+        flexGrow: 1,
         transition: '0.2s ease-in',
     },
 })
@@ -126,22 +129,19 @@ export function SocialMedia() {
     }
 
     return (
-        <Paper elevation={0} className={classes.paper}>
+        <div className={classes.socialMediaRoot}>
             {Object.entries(socialMediaDict).map(([key, value]) => {
                 return (
                     <a
                         href={value.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{
-                            height: 'fit-content',
-                            width: 'fit-content',
-                        }}
+                        key={key + '_key'}
                     >
                         {socialMediaIcons[key]}
                     </a>
                 )
             })}
-        </Paper>
+        </div>
     )
 }

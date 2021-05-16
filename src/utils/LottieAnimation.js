@@ -13,7 +13,7 @@ export default function LottieAnimation({ lottie, width, height }) {
 
     return (
         <div>
-            <Lottie options={defaultOptions}/>
+            <Lottie options={defaultOptions} />
         </div>
     )
 }

@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function Main() {
+export default function Main(props) {
     const classes = useStyles()
 
     return (
@@ -26,8 +26,8 @@ export default function Main() {
             <Education />
             <Experience />
             <Achievement />
-            <Certificate />
-            <Project />
+            {/* <Certificate /> */}
+            {/* <Project /> */}
         </div>
     )
 }

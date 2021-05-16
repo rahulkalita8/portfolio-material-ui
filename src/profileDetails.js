@@ -65,16 +65,21 @@ const EducationDetails = {
             degree: "Bachelor's in Computer Science",
             years: '2015-2019',
             grade: '8.89/10 CGPA',
-            details: '',
+            details: [
+                '1 Publication',
+                'President of Hindi Literary Club',
+                'Won Debate multiple times',
+                'Computer Society of India',
+            ],
         },
         {
             name: 'NC State University',
-            imageUrl: '/assets/images/nc-state.png',
+            imageUrl: '/assets/images/nc-state-transparent.png',
             imageTitle: 'NC State University',
             degree: "Master's in Computer Science",
             years: '2021-Present',
-            grade: '-',
-            details: '',
+            grade: 'NA',
+            details: ['Still to go there', 'Hopefully TA', 'Get a Job'],
         },
     ],
 }
@@ -85,9 +90,11 @@ const WorkExperienceDetails = {
         {
             name: 'PayPal',
             role: 'Software Engineer',
-            logo: '/assets/images/paypal.jpg',
+            logo: '/assets/images/paypal-transparent.png',
             timeline: 'June 2018 – Present',
-            desc: [
+            description: '',
+            // 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            details: [
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
             ],
@@ -95,9 +102,11 @@ const WorkExperienceDetails = {
         {
             name: 'PayPal',
             role: 'Software Engineer',
-            logo: '/assets/images/paypal.png',
+            logo: '/assets/images/paypal-transparent.png',
             timeline: 'June 2018 – Present',
-            desc: [
+            description:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+            details: [
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
             ],
@@ -109,8 +118,8 @@ const AcheivementDetails = {
     enable: true,
     acheivements: [
         {
-            name: 'KLA Tencor',
-            type: 'Overnight Hackathon',
+            name: 'Hackathon',
+            organization: 'KLA Tencor',
             imageUrl: '/assets/images/kla-tencor-logo.png',
             details: 'Organized by something blah blah blah',
             date: '29/01/2021',
@@ -121,6 +130,27 @@ const AcheivementDetails = {
                     url: 'https://facebook.com',
                 },
             ],
+        },
+        {
+            name: 'Neural Networks and Deep Learning',
+            imageUrl: '/assets/images/coursera-logo.png',
+            organization: 'Coursera',
+            date: 'Jan 2021',
+            details: '',
+            usefulLinks: [
+                {
+                    name: 'Certificate',
+                    url: 'https://coursera.org/share/447d5a0475fac24a23fcdf12650e1725',
+                },
+            ],
+        },
+        {
+            name: 'Applied Machine Learning: Algorithms',
+            imageUrl: '/assets/images/linkedin-round-transparent.png',
+            organization: 'LinkedIn',
+            date: 'Jan 2021',
+            details: '',
+            usefulLinks: [],
         },
     ],
 }
@@ -149,8 +179,7 @@ const ProjectDetails = {
     enable: true,
     projects: [
         {
-            name:
-                'Collaborative Recommendation System Examining Serendipitous Items',
+            name: 'Collaborative Recommendation System Examining Serendipitous Items',
             date: 'Aug 2018 - Oct 2018',
             imageUrl: '',
             url: '',
@@ -162,7 +191,7 @@ const ProjectDetails = {
 const ContactDetails = {
     name: 'Rahul Kalita',
     description: '',
-    email: ['example1gmail.com', 'example2@gmail.com'],
+    email: 'example1gmail.com',
 }
 
 export {
@@ -173,4 +202,5 @@ export {
     AcheivementDetails,
     LicenseCertificateDetails,
     ProjectDetails,
+    ContactDetails,
 }
