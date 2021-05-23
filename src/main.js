@@ -6,8 +6,9 @@ import Header from './components/Header/Header'
 import Experience from './containers/experience/Experience'
 import Achievement from './containers/achievements/Achievements'
 import Certificate from './containers/certificates/Certificate'
-import Project from './containers/projects/Projects'
 import ExperienceDemo from './containers/experience/ExperienceDemo'
+import Accomplishments from './containers/accomplishments/Accomplishments'
+import Contact from './containers/contact/Contact'
 
 const useStyles = makeStyles((theme) => ({
     mainDiv: {
@@ -28,8 +29,9 @@ export default function Main(props) {
             <Experience />
             <Achievement />
             {/* <Certificate /> */}
-            {/* <Project /> */}
+            <Accomplishments />
             {/* <ExperienceDemo /> */}
+            <Contact />
         </div>
     )
 }

@@ -3,4 +3,7 @@ module.exports = {
     tabWidth: 4,
     semi: false,
     singleQuote: true,
+    printWidth: 100,
+    editorWordWrap: 'wordWrapColumn',
+    editorWordWrapColumn: 100,
 }

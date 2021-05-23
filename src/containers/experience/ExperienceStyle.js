@@ -19,10 +19,6 @@ export default (theme) => ({
         },
     },
     experienceLists: {
-        // display: 'grid',
-        // gridAutoRows: '1fr',
-        // gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr));',
-        // gridGap: '1rem 1rem',
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',

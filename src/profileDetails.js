@@ -234,17 +234,62 @@ const LicenseCertificateDetails = {
     ],
 }
 
-const ProjectDetails = {
+const AccomplishmentsDetails = {
     enable: true,
-    projects: [
-        {
-            name: 'Collaborative Recommendation System Examining Serendipitous Items',
-            date: 'Aug 2018 - Oct 2018',
-            imageUrl: '',
-            url: '',
-            details: ';jahgufyudsdoiugf oiguifyghcig ouiyfudghgkh',
-        },
-    ],
+    accomplishments: {
+        patents: [
+            {
+                name: 'Patent1',
+                date: 'Aug 2018 - Oct 2018',
+                status: 'pending',
+                issuer: 'IDK',
+                url: {
+                    GitHub: 'https://facebook.com',
+                },
+                details: ';jahgufyudsdoiugf oiguifyghcig ouiyfudghgkh',
+            },
+            {
+                name: 'Patent 2',
+                date: 'Aug 2018 - Oct 2018',
+                status: 'pending',
+                issuer: 'IDK',
+                url: {},
+                details: '',
+            },
+        ],
+        publications: [
+            {
+                name: 'publications',
+                date: 'Aug 2018 - Oct 2018',
+                publisher: 'India',
+                url: {
+                    GitHub: 'https://facebook.com',
+                },
+                details: ';jahgufyudsdoiugf oiguifyghcig ouiyfudghgkh',
+            },
+        ],
+        projects: [
+            {
+                name: 'projects',
+                date: 'Aug 2018 - Oct 2018',
+                url: {
+                    GitHub: 'https://wikipedia.com',
+                },
+                details: ';jahgufyudsdoiugf oiguifyghcig ouiyfudghgkh',
+            },
+        ],
+        awards: [
+            {
+                name: 'awards',
+                date: 'Aug 2018 - Oct 2018',
+                issuer: 'KLA',
+                url: {
+                    GitHub: 'https://10fastfingers.com',
+                },
+                details: ';jahgufyudsdoiugf oiguifyghcig ouiyfudghgkh',
+            },
+        ],
+    },
 }
 
 const ContactDetails = {
@@ -260,7 +305,7 @@ export {
     WorkExperienceDetails,
     AcheivementDetails,
     LicenseCertificateDetails,
-    ProjectDetails,
+    AccomplishmentsDetails,
     ContactDetails,
     WorkExperienceDetailsDemo,
 }

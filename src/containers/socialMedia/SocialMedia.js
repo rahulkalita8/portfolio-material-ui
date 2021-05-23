@@ -49,8 +49,7 @@ const useStyles = makeStyles({
 function getEnabledSocialMedia() {
     let socialMediaDict = {}
     for (let key in SocialMediaDetails) {
-        if (SocialMediaDetails[key].enable)
-            socialMediaDict[key] = SocialMediaDetails[key]
+        if (SocialMediaDetails[key].enable) socialMediaDict[key] = SocialMediaDetails[key]
     }
     return socialMediaDict
 }

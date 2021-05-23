@@ -1,13 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import theme from './AchievementCardStyle'
-import {
-    Card,
-    CardContent,
-    CardMedia,
-    Typography,
-    Button,
-} from '@material-ui/core'
+import { Card, CardContent, CardMedia, Typography, Button } from '@material-ui/core'
 
 const useStyles = makeStyles(theme)
 
@@ -29,21 +23,15 @@ export default function AchievementCard(props) {
                         <Typography className={classes.organization}>
                             {props.organization}
                         </Typography>
-                        <Typography className={classes.name}>
-                            {props.name}
-                        </Typography>
-                        <Typography className={classes.date}>
-                            {props.date}
-                        </Typography>
-                        <Typography className={classes.details}>
-                            {props.details}
-                        </Typography>
+                        <Typography className={classes.name}>{props.name}</Typography>
+                        <Typography className={classes.date}>{props.date}</Typography>
+                        <Typography className={classes.details}>{props.details}</Typography>
                         {props.usefulLinks.map((link) => {
                             return (
                                 <Button
                                     color="primary"
                                     href={link.url}
-                                    blank="_target"
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     className={classes.achievementButton}
                                 >
