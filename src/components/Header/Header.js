@@ -7,17 +7,22 @@ import Typography from '@material-ui/core/Typography'
 import MenuItem from '@material-ui/core/MenuItem'
 import Menu from '@material-ui/core/Menu'
 import MenuIcon from '@material-ui/icons/Menu'
+import Slide from '@material-ui/core/Slide'
+import Paper from '@material-ui/core/Paper'
+
+import useScrollTrigger from '@material-ui/core/useScrollTrigger'
 
 import theme from './HeaderStyles'
 import { Link } from '@material-ui/core'
 
 const useStyles = makeStyles(theme)
 
-export default function PrimarySearchAppBar(props) {
+export default function Header(props) {
     const classes = useStyles()
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
 
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
+    const trigger = useScrollTrigger()
 
     const menuItems = ['Education', 'Experience', 'Achievements', 'Contact']
 
@@ -46,6 +51,7 @@ export default function PrimarySearchAppBar(props) {
                     width: '100vw',
                     marginTop: '48px',
                     boxShadow: '0 4px 2px -2px gray',
+                    // background: 'rgba(255, 255, 255, 0.1',
                 },
             }}
         >
@@ -69,22 +75,13 @@ export default function PrimarySearchAppBar(props) {
     )
 
     return (
-        <div className={classes.grow}>
-            <AppBar position="static" color="transparent">
+        <Slide appear={false} direction="down" in={!trigger}>
+            <AppBar
+                // position="static"
+                color="white"
+            >
                 <Toolbar className={classes.toolbar}>
-                    <IconButton
-                        edge="start"
-                        aria-controls={mobileMenuId}
-                        className={classes.sectionMobile}
-                        onClick={handleMobileMenuOpen}
-                        color="inherit"
-                        aria-label="open drawer"
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" noWrap>
-                        Logo
-                    </Typography>
+                    <Typography className={classes.logo}>Rahul Kalita</Typography>
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
                         {menuItems.map((m) => {
@@ -101,9 +98,19 @@ export default function PrimarySearchAppBar(props) {
                             )
                         })}
                     </div>
+                    <IconButton
+                        edge="start"
+                        aria-controls={mobileMenuId}
+                        className={classes.sectionMobile}
+                        onClick={handleMobileMenuOpen}
+                        color="inherit"
+                        aria-label="open drawer"
+                    >
+                        <MenuIcon />
+                    </IconButton>
                 </Toolbar>
+                {renderMobileMenu}
             </AppBar>
-            {renderMobileMenu}
-        </div>
+        </Slide>
     )
 }

@@ -2,6 +2,9 @@ export default (theme) => ({
     grow: {
         flexGrow: 1,
     },
+    logo: {
+        fontFamily: 'Rock Salt',
+    },
     toolbar: {
         minHeight: '48px',
         [theme.breakpoints.up('md')]: {
@@ -30,6 +33,7 @@ export default (theme) => ({
     },
     sectionMobile: {
         display: 'flex',
+        alignSelf: 'flex-end',
         [theme.breakpoints.up('md')]: {
             display: 'none',
         },
