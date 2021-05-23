@@ -5,11 +5,7 @@ import TimelineSeparator from '@material-ui/lab/TimelineSeparator'
 import TimelineConnector from '@material-ui/lab/TimelineConnector'
 import TimelineContent from '@material-ui/lab/TimelineContent'
 import TimelineDot from '@material-ui/lab/TimelineDot'
-import {
-    makeStyles,
-    createMuiTheme,
-    ThemeProvider,
-} from '@material-ui/core/styles'
+import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import React from 'react'
 import theme from './ExperienceCardStyle'
 import Fade from 'react-reveal/Fade'
@@ -40,6 +36,7 @@ export default function ExperienceCard(props) {
                         className={classes.experienceCardMedia}
                     ></CardMedia>
                 </div>
+                <Typography className={classes.companyName}>{props.name}</Typography>
                 <div className={classes.experienceCardContentRoot}>
                     {props.allDetails && (
                         <Timeline>
@@ -58,34 +55,18 @@ export default function ExperienceCard(props) {
                                                         '-experience-timeline-card-' +
                                                         index
                                                     }
-                                                    className={
-                                                        classes.experienceCard
-                                                    }
+                                                    className={classes.experienceCard}
                                                 >
                                                     <CardContent
-                                                        className={
-                                                            classes.experienceCardContent
-                                                        }
+                                                        className={classes.experienceCardContent}
                                                     >
-                                                        <Typography
-                                                            className={
-                                                                classes.role
-                                                            }
-                                                        >
+                                                        <Typography className={classes.role}>
                                                             {m.role}
                                                         </Typography>
-                                                        <Typography
-                                                            className={
-                                                                classes.timeline
-                                                            }
-                                                        >
+                                                        <Typography className={classes.timeline}>
                                                             {m.timeline}
                                                         </Typography>
-                                                        <Typography
-                                                            className={
-                                                                classes.details
-                                                            }
-                                                        >
+                                                        <Typography className={classes.details}>
                                                             {m.description}
                                                         </Typography>
                                                     </CardContent>

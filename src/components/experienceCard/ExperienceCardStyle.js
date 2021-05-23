@@ -45,12 +45,14 @@ export default (theme) => ({
         },
     },
     companyName: {
-        fontSize: '1.2rem',
+        margin: 'auto',
+        color: '#3f51b5',
+        fontSize: '1rem',
         marginBottom: '1rem',
         fontWeight: 'bold',
         fontFamily: 'Montserrat',
         [theme.breakpoints.up('md')]: {
-            fontSize: '3rem',
+            fontSize: '1.5rem',
         },
     },
     role: {
