@@ -9,6 +9,7 @@ import Certificate from './containers/certificates/Certificate'
 import ExperienceDemo from './containers/experience/ExperienceDemo'
 import Accomplishments from './containers/accomplishments/Accomplishments'
 import Contact from './containers/contact/Contact'
+import Skills from './containers/skills/Skills'
 
 const useStyles = makeStyles((theme) => ({
     mainDiv: {
@@ -25,6 +26,7 @@ export default function Main(props) {
         <div className={classes.mainDiv}>
             <Header />
             <AboutCard />
+            <Skills />
             <Education />
             <Experience />
             <Achievement />

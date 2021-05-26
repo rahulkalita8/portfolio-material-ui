@@ -1,17 +1,35 @@
-const TechStack = {
+const SkillsDetails = {
     enable: true,
-    tech: [
+    whatIdo:
+        'I learn and develop things. Small projects over the weekend, random tech talks and Reddit would interest me. I play table chess, tennis and cricket for fun. ',
+    skills: [
         {
-            name: 'Python',
-            level: 8,
+            skillName: "React",
+            SkillPercent: "70%",
         },
         {
-            name: 'Java',
-            level: 9,
+            skillName: "Java",
+            SkillPercent: "90%",
         },
         {
-            name: 'InfluxDB',
-            level: 7,
+            skillName: "Python",
+            SkillPercent: "85%",
+        },
+        {
+            skillName: "Scala",
+            SkillPercent: "40%",
+        },
+        {
+            skillName: "JS",
+            SkillPercent: "70%",
+        },
+        {
+            skillName: "InfluxDB",
+            SkillPercent: "80%",
+        },
+        {
+            skillName: "MySQL",
+            SkillPercent: "50%",
         },
     ],
 }
@@ -299,7 +317,7 @@ const ContactDetails = {
 }
 
 export {
-    TechStack,
+    SkillsDetails,
     SocialMediaDetails,
     EducationDetails,
     WorkExperienceDetails,
