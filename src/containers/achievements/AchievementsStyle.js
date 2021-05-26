@@ -6,6 +6,7 @@ export default (theme) => ({
             'linear-gradient(173deg, rgba(232,239,240,0.2539390756302521) 60%, rgba(255,255,255,1) 60%)',
         [theme.breakpoints.up('md')]: {
             padding: '2rem',
+            minHeight: '100vh',
         },
     },
     achievementRootLabel: {
@@ -21,5 +22,4 @@ export default (theme) => ({
         gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr));',
         gridGap: '1rem 1rem',
     },
-    
 })

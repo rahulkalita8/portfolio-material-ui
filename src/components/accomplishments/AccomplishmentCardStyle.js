@@ -1,10 +1,9 @@
 export default (theme) => ({
     accomplishmentsCardRoot: {
-        margin: '10px',
-        width: '100vh',
+        // margin: '10px',
     },
     accomplishmentsCard: {
-        padding: '0.5rem 1rem',
+        // padding: '0.5rem 1rem',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'flex-start',
@@ -14,7 +13,7 @@ export default (theme) => ({
             width: '100%',
             transition: 'width 0.6s ease-in-out',
         },
-        background: 'rgba(255, 255, 255, 0)',
+        background: 'rgba(255, 255, 255, 0.5)',
     },
     accomplishmentsCardMediaRoot: {
         width: '80px',

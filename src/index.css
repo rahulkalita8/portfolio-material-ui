@@ -1,23 +1,21 @@
 @font-face {
     font-family: 'Montserrat';
-    src: local('Montserrat'),
-        url('./resources/fonts/Montserrat-Regular.ttf') format('woff');
+    src: local('Montserrat'), url('./resources/fonts/Montserrat-Regular.ttf') format('woff');
     font-display: swap;
 }
 @font-face {
     font-family: 'OpenSans';
-    src: local('OpenSans'),
-        url('./resources/fonts/OpenSans-Regular.ttf') format('woff');
+    src: local('OpenSans'), url('./resources/fonts/OpenSans-Regular.ttf') format('woff');
     font-display: swap;
 }
 
 * {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 html,

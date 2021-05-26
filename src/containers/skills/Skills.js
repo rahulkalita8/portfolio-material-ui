@@ -2,6 +2,7 @@ import React from 'react'
 import { SkillsDetails } from '../../profileDetails'
 import { makeStyles, Paper, Typography } from '@material-ui/core'
 import theme from './SkillsStyle'
+import { Fade, Slide, Zoom } from 'react-reveal'
 
 const useStyles = makeStyles(theme)
 
@@ -9,57 +10,42 @@ export default function Skills() {
     const classes = useStyles()
 
     return (
-        <div id="skills" className={classes.skillsRoot}>
-            {SkillsDetails.enable && SkillsDetails.skills && (
-                <div>
-                    <Typography className={classes.skillsRootLabel}>
-                        Skills and Proficiency
-                    </Typography>
-                    <div className={classes.aboutRoot}>
-                        {/* <div className={classes.whatIdo}>
-                            <Typography className={classes.whatHowIdoHeading}>What I do</Typography>
-                            <Typography className={classes.whatIdoText}>
-                                {SkillsDetails.whatIdo}
-                            </Typography>
-                        </div> */}
+        <Fade duration={2000}>
+            <div id="skills" className={classes.skillsRoot}>
+                {SkillsDetails.enable && SkillsDetails.skills && (
+                    <div>
+                        <Typography className={classes.skillsRootLabel}>
+                            Skills and Proficiency
+                        </Typography>
 
-                        <div className={classes.howIdoIt}>
-                            {/* <Typography className={classes.whatHowIdoHeading}>
-                                How I do it
-                            </Typography> */}
+                        <div className={classes.skillsContainer}>
                             {SkillsDetails.skills.map((skill) => {
                                 return (
                                     <div className={classes.skillsBars}>
-                                        <Paper
-                                            style={{
-                                                width: '6rem',
-                                                background: '#4da6ff',
-                                            }}
-                                        >
+                                        <Paper className={classes.skillName}>
                                             {skill.skillName}
                                         </Paper>
-                                        <Paper
-                                            style={{
-                                                width: '60vw',
-                                                background: '#cccccc',
-                                                
-                                            }}
-                                        >
+                                        <Paper className={classes.skillBarContainer}>
                                             <div
+                                                className={classes.skillBarPercent}
                                                 style={{
                                                     width: skill.SkillPercent,
-                                                    height: '1rem',
-                                                    background: '#b3e6ff',
+                                                    borderRadius:
+                                                        skill.SkillPercent == '100%'
+                                                            ? '0 0.5rem 0.5rem 0'
+                                                            : '0',
                                                 }}
-                                            ></div>
+                                            >
+                                                {skill.SkillPercent}
+                                            </div>
                                         </Paper>
                                     </div>
                                 )
                             })}
                         </div>
                     </div>
-                </div>
-            )}
-        </div>
+                )}
+            </div>
+        </Fade>
     )
 }

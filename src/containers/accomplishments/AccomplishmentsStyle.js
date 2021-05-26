@@ -2,8 +2,8 @@ export default (theme) => ({
     accomplishmentsRoot: {
         padding: '2rem',
         backgroundImage:
-            'linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(/assets/images/about-background3.jpg)',
-        backgroundPosition: 'center',
+            'linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(/assets/images/accomplishment-background.jpg)',
+        backgroundPosition: 'bottom',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         margin: 'auto',
@@ -35,13 +35,16 @@ export default (theme) => ({
         flexDirection: 'column',
     },
     accomplishmentsLists: {
+        width: '100%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
         flexWrap: 'wrap',
     },
-
+    accomplishmentsListItem: {
+        width: '100%',
+    },
     projectBorder: {
         width: '100%',
         borderTop: '2px solid rgba(211, 211, 211, 0.5)',

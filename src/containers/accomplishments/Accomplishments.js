@@ -75,7 +75,7 @@ export default function Accomplishments() {
                                                     {value &&
                                                         value.map((v) => {
                                                             return (
-                                                                <div>
+                                                                <div className={classes.accomplishmentsListItem}>
                                                                     <AccomplishmentCard
                                                                         name={v.name}
                                                                         date={v.date}

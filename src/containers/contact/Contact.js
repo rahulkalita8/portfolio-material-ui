@@ -3,7 +3,7 @@ import React from 'react'
 import theme from './ContactStyle'
 import { SocialMedia } from '../socialMedia/SocialMedia'
 import { ContactDetails } from '../../profileDetails'
-import { Link, makeStyles } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core'
 import { EmailRounded } from '@material-ui/icons'
 
 const useStyles = makeStyles(theme)
@@ -14,7 +14,7 @@ export default function Contact() {
     return (
         <div className={classes.contactRoot}>
             <div>
-                <SocialMedia />
+                <SocialMedia style={{ margin: '0' }} />
             </div>
             <div className={classes.footer}>
                 Rahul Kalita @ 2021

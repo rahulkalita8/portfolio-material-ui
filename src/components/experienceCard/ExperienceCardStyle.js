@@ -39,7 +39,7 @@ export default (theme) => ({
     experienceCardContentRoot: {},
     experienceCardContent: {
         padding: '0 10px',
-        textAlign: 'center',
+        textAlign: 'left',
         [theme.breakpoints.up('md')]: {
             padding: '0 20px',
         },
@@ -51,6 +51,7 @@ export default (theme) => ({
         marginBottom: '1rem',
         fontWeight: 'bold',
         fontFamily: 'Montserrat',
+        textAlign: 'center',
         [theme.breakpoints.up('md')]: {
             fontSize: '1.5rem',
         },

@@ -4,32 +4,32 @@ const SkillsDetails = {
         'I learn and develop things. Small projects over the weekend, random tech talks and Reddit would interest me. I play table chess, tennis and cricket for fun. ',
     skills: [
         {
-            skillName: "React",
-            SkillPercent: "70%",
+            skillName: 'React',
+            SkillPercent: '70%',
         },
         {
-            skillName: "Java",
-            SkillPercent: "90%",
+            skillName: 'Java',
+            SkillPercent: '90%',
         },
         {
-            skillName: "Python",
-            SkillPercent: "85%",
+            skillName: 'Python',
+            SkillPercent: '85%',
         },
         {
-            skillName: "Scala",
-            SkillPercent: "40%",
+            skillName: 'Scala',
+            SkillPercent: '40%',
         },
         {
-            skillName: "JS",
-            SkillPercent: "70%",
+            skillName: 'JS',
+            SkillPercent: '70%',
         },
         {
-            skillName: "InfluxDB",
-            SkillPercent: "80%",
+            skillName: 'InfluxDB',
+            SkillPercent: '100%',
         },
         {
-            skillName: "MySQL",
-            SkillPercent: "50%",
+            skillName: 'MySQL',
+            SkillPercent: '50%',
         },
     ],
 }
