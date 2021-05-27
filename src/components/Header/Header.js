@@ -1,21 +1,54 @@
 import React from 'react'
+
+//MaterialUI
 import { makeStyles } from '@material-ui/core/styles'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import IconButton from '@material-ui/core/IconButton'
-import Typography from '@material-ui/core/Typography'
-import MenuItem from '@material-ui/core/MenuItem'
-import Menu from '@material-ui/core/Menu'
+import {
+    Link,
+    AppBar,
+    Toolbar,
+    IconButton,
+    Typography,
+    MenuItem,
+    Menu,
+    Slide,
+    useScrollTrigger,
+} from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
-import Slide from '@material-ui/core/Slide'
-import Paper from '@material-ui/core/Paper'
 
-import useScrollTrigger from '@material-ui/core/useScrollTrigger'
+//Local Component
+import {
+    SkillsDetails,
+    EducationDetails,
+    WorkExperienceDetails,
+    AcheivementDetails,
+    AccomplishmentsDetails,
+    ContactDetails,
+} from '../../profileDetails'
 
+//JSS
 import theme from './HeaderStyles'
-import { Link } from '@material-ui/core'
 
 const useStyles = makeStyles(theme)
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1)
+}
+
+function getAllEnabled() {
+    const enabledComponent = {}
+    enabledComponent['skills'] = SkillsDetails.enable ? SkillsDetails.enable : false
+    enabledComponent['education'] = EducationDetails.enable ? EducationDetails.enable : false
+    enabledComponent['experiences'] = WorkExperienceDetails.enable
+        ? WorkExperienceDetails.enable
+        : false
+    enabledComponent['achievements'] = AcheivementDetails.enable ? AcheivementDetails.enable : false
+    enabledComponent['accomplishments'] = AccomplishmentsDetails.enable
+        ? AccomplishmentsDetails.enable
+        : false
+    enabledComponent['contact'] = ContactDetails.enable ? ContactDetails.enable : false
+
+    return enabledComponent
+}
 
 export default function Header(props) {
     const classes = useStyles()
@@ -24,7 +57,10 @@ export default function Header(props) {
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
     const trigger = useScrollTrigger()
 
-    const menuItems = ['Education', 'Experience', 'Achievements', 'Contact']
+    const enabledComponent = getAllEnabled()
+    const menuItems = Object.keys(enabledComponent).filter(function (key) {
+        return enabledComponent[key]
+    })
 
     const handleMobileMenuClose = () => {
         setMobileMoreAnchorEl(null)
@@ -38,10 +74,8 @@ export default function Header(props) {
     const renderMobileMenu = (
         <Menu
             anchorEl={mobileMoreAnchorEl}
-            // anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
             id={mobileMenuId}
             keepMounted
-            // transformOrigin={{ vertical: 'top', horizontal: 'right' }}
             open={isMobileMenuOpen}
             className={classes.menuWindow}
             onClose={handleMobileMenuClose}
@@ -51,21 +85,21 @@ export default function Header(props) {
                     width: '100vw',
                     marginTop: '48px',
                     boxShadow: '0 4px 2px -2px gray',
-                    // background: 'rgba(255, 255, 255, 0.1',
                 },
             }}
         >
-            {menuItems.map((m) => {
+            {menuItems.map((m, index) => {
                 return (
-                    <MenuItem>
-                        <Typography className={classes.menuTypography}>
+                    <MenuItem key={m + '-' + index}>
+                        <Typography key={m + '-' + index} className={classes.menuTypography}>
                             <Link
                                 href={'#' + m}
                                 underline="none"
                                 onClick={handleMobileMenuClose}
                                 className={classes.menuTypographyLink}
+                                key={m + '-' + index}
                             >
-                                {m}
+                                {capitalizeFirstLetter(m)}
                             </Link>
                         </Typography>
                     </MenuItem>
@@ -76,23 +110,21 @@ export default function Header(props) {
 
     return (
         <Slide appear={false} direction="down" in={!trigger}>
-            <AppBar
-                // position="static"
-                color="white"
-            >
+            <AppBar className={classes.appbar}>
                 <Toolbar className={classes.toolbar}>
                     <Typography className={classes.logo}>Rahul Kalita</Typography>
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
-                        {menuItems.map((m) => {
+                        {menuItems.map((m, index) => {
                             return (
-                                <Typography className={classes.menuTypography}>
+                                <Typography key={m + index} className={classes.menuTypography}>
                                     <Link
                                         href={'#' + m}
                                         underline="none"
                                         className={classes.menuTypographyLink}
+                                        key={m + index}
                                     >
-                                        {m}
+                                        {capitalizeFirstLetter(m)}
                                     </Link>
                                 </Typography>
                             )

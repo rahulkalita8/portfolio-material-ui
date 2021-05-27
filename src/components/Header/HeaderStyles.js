@@ -1,4 +1,8 @@
 export default (theme) => ({
+    appbar: {
+        background: '#ffffff',
+        color: '#000000',
+    },
     grow: {
         flexGrow: 1,
     },
