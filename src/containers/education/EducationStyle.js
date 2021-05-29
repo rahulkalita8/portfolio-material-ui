@@ -8,7 +8,7 @@ export default (theme) => ({
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         [theme.breakpoints.up('md')]: {
-            minHeight: '100vh',
+            minHeight: '80vh',
         },
     },
     educationRootLabel: {

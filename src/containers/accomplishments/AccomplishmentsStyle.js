@@ -8,7 +8,7 @@ export default (theme) => ({
         backgroundRepeat: 'no-repeat',
         margin: 'auto',
         [theme.breakpoints.up('md')]: {
-            minHeight: '100vh',
+            minHeight: '80vh',
         },
     },
     accomplishmentsRootLabel: {

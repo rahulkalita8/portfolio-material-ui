@@ -28,7 +28,6 @@ export default (theme) => ({
         height: '80px',
         width: '80px',
         backgroundPosition: 'center',
-        // backgroundSize: '100% 100%',
         [theme.breakpoints.up('md')]: {
             width: '150px',
             height: '150px',
@@ -54,36 +53,34 @@ export default (theme) => ({
     name: {
         fontSize: '0.8rem',
         fontWeight: 'bold',
+        marginBottom: '0.5rem',
         fontFamily: 'Montserrat',
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.5rem',
+            fontSize: '1.2rem',
         },
     },
     date: {
         fontSize: '0.8rem',
         fontWeight: 'bold',
         fontFamily: 'Montserrat',
+        marginBottom: '0.5rem',
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.5rem',
+            fontSize: '1rem',
         },
-    },
-    listItems: {
-        padding: '0',
-    },
-    listIcon: {
-        minWidth: '24px',
     },
     details: {
         fontSize: '0.8rem',
         fontFamily: 'Montserrat',
+        marginBottom: '0.5rem',
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.2rem',
+            fontSize: '1rem',
         },
     },
     achievementButton: {
         background: 'transparent',
         margin: '0.5rem',
         borderRadius: '8px',
+        alignSelf: 'end',
         border: '2px solid #3d5afe',
         '&:hover': {
             background: '#3d5afe',

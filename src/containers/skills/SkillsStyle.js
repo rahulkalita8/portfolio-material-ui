@@ -49,7 +49,6 @@ export default (theme) => ({
         width: '60vw',
         background: '#cccccc',
         borderRadius: '0 0.5rem 0.5rem 0',
-        textAlign: 'center',
         margin: '0.8rem 0rem',
         [theme.breakpoints.up('md')]: {
             fontSize: '1rem',
@@ -60,7 +59,7 @@ export default (theme) => ({
         background: '#b3e6ff',
         borderRadius: '0',
         padding: '0.4rem 0',
-        textAlign: 'center',
+        textAlign: 'start',
         fontSize: '0.8rem',
         fontFamily: 'Monteserrat',
         [theme.breakpoints.up('md')]: {

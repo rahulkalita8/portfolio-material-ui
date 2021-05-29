@@ -30,7 +30,6 @@ export default (theme) => ({
         height: '80px',
         width: '80px',
         backgroundPosition: 'center',
-        // backgroundSize: '100% 100%',
         [theme.breakpoints.up('md')]: {
             width: '100px',
             height: '100px',
@@ -71,12 +70,6 @@ export default (theme) => ({
         [theme.breakpoints.up('md')]: {
             fontSize: '1rem',
         },
-    },
-    listItems: {
-        padding: '0',
-    },
-    listIcon: {
-        minWidth: '24px',
     },
     details: {
         fontSize: '0.8rem',
