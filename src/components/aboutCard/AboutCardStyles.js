@@ -2,18 +2,11 @@ export default (theme) => ({
     aboutMain: {
         width: '100vw',
         height: '100vh',
-        // display: 'flex',
-        // flexDirection: 'column',
-        // alignItems: 'center',
-        // justifyContent: 'flex-end',
         backgroundImage: 'url(/assets/images/about-background4.jpg)',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         margin: 'auto',
-        [theme.breakpoints.up('md')]: {
-            // flexDirection: 'row',
-        },
     },
     aboutDetails: {
         height: '100vh',

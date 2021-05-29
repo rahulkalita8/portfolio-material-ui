@@ -1,9 +1,13 @@
+import React from 'react'
+import { Fade } from 'react-reveal'
+
+//MaterialUI
 import { Card, CardContent, Button, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord'
-import React from 'react'
+
+//JSS
 import theme from './AccomplishmentCardStyle'
-import { Fade } from 'react-reveal'
 
 const useStyles = makeStyles(theme)
 
@@ -30,7 +34,7 @@ export default function AccomplishmentCard(props) {
                                 <Typography className={classes.date}>{props.date}</Typography>
                             </div>
                             <Typography className={classes.details}>{props.details}</Typography>
-                            {Object.entries(props.url).map(([name, link]) => {
+                            {Object.entries(props.url).map(([name, link], index) => {
                                 return (
                                     <Button
                                         color="primary"
@@ -38,6 +42,7 @@ export default function AccomplishmentCard(props) {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={classes.accomplishmentButton}
+                                        key={name + '-' + index}
                                     >
                                         {name}
                                     </Button>

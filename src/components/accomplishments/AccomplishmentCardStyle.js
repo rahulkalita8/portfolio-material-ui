@@ -1,9 +1,6 @@
 export default (theme) => ({
-    accomplishmentsCardRoot: {
-        // margin: '10px',
-    },
+    accomplishmentsCardRoot: {},
     accomplishmentsCard: {
-        // padding: '0.5rem 1rem',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'flex-start',
