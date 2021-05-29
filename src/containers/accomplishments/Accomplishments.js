@@ -1,14 +1,16 @@
-import { makeStyles } from '@material-ui/core/styles'
 import React, { useState } from 'react'
-import { Typography } from '@material-ui/core'
-import AccomplishmentCard from '../../components/accomplishments/AccomplishmentCard'
-import { AccomplishmentsDetails } from '../../profileDetails'
-import Accordion from '@material-ui/core/Accordion'
-import AccordionSummary from '@material-ui/core/AccordionSummary'
-import AccordionDetails from '@material-ui/core/AccordionDetails'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import { Fade, Slide } from 'react-reveal'
+import { Slide } from 'react-reveal'
 
+//MaterialUI
+import { makeStyles } from '@material-ui/core/styles'
+import { Typography, Accordion, AccordionSummary, AccordionDetails } from '@material-ui/core'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+
+//Local Component
+import { AccomplishmentsDetails } from '../../profileDetails'
+import AccomplishmentCard from '../../components/accomplishments/AccomplishmentCard'
+
+//JSS
 import theme from './AccomplishmentsStyle'
 
 const useStyles = makeStyles(theme)
@@ -18,7 +20,8 @@ function capitalizeFirstLetter(string) {
 }
 
 function getAllName(array) {
-    let permittedValues = array.map(function (value) {
+    let permittedValues = array.map(function (value, index) {
+        if (index == array.length - 1) return value.name
         return value.name + '\t \u25CF \t'
     })
     return permittedValues
@@ -30,74 +33,116 @@ export default function Accomplishments() {
     const [expanded, setExpanded] = useState(false)
 
     return (
-        <div className={classes.accomplishmentsRoot} id="accomplishments">
+        <div id="accomplishments">
             {AccomplishmentsDetails.enable && (
-                <div>
+                <div className={classes.accomplishmentsRoot}>
                     <Typography className={classes.accomplishmentsRootLabel}>
                         Accomplishments
                     </Typography>
                     {AccomplishmentsDetails.accomplishments &&
                         Object.entries(AccomplishmentsDetails.accomplishments).map(
-                            ([key, value]) => {
+                            ([key, value], index) => {
                                 return (
-                                    <div>
-                                        <Accordion
-                                            className={classes.accordion}
-                                            onChange={(e, expanded) => {
-                                                if (expanded) {
-                                                    setExpanded(true)
-                                                } else {
-                                                    setExpanded(false)
-                                                }
-                                            }}
-                                        >
-                                            <AccordionSummary
-                                                expandIcon={<ExpandMoreIcon />}
-                                                aria-controls="panel1a-content"
-                                                id="panel1a-header"
+                                    <div key={key + '-' + index}>
+                                        {value && value.length > 0 && (
+                                            <Accordion
+                                                className={classes.accordion}
+                                                onChange={(e, expanded) => {
+                                                    if (expanded) {
+                                                        setExpanded(true)
+                                                    } else {
+                                                        setExpanded(false)
+                                                    }
+                                                }}
+                                                key={key + '-' + index}
                                             >
-                                                <div className={classes.accordionSummary}>
-                                                    <Typography className={classes.heading}>
-                                                        {capitalizeFirstLetter(key)}
-                                                    </Typography>
-                                                    {value && !expanded && (
-                                                        <Typography>
-                                                            {getAllName(
-                                                                AccomplishmentsDetails
-                                                                    .accomplishments[key]
-                                                            )}
+                                                <AccordionSummary
+                                                    expandIcon={<ExpandMoreIcon />}
+                                                    aria-controls="panel1a-content"
+                                                    id="panel1a-header"
+                                                    key={key + '-' + index}
+                                                >
+                                                    <div
+                                                        className={classes.accordionSummary}
+                                                        key={key + '-' + index}
+                                                    >
+                                                        <Typography
+                                                            className={classes.heading}
+                                                            key={key + '-' + index + '-head'}
+                                                        >
+                                                            {capitalizeFirstLetter(key)}
                                                         </Typography>
-                                                    )}
-                                                </div>
-                                            </AccordionSummary>
-                                            <AccordionDetails>
-                                                <div className={classes.accomplishmentsLists}>
-                                                    {value &&
-                                                        value.map((v) => {
-                                                            return (
-                                                                <div className={classes.accomplishmentsListItem}>
-                                                                    <AccomplishmentCard
-                                                                        name={v.name}
-                                                                        date={v.date}
-                                                                        url={v.url}
-                                                                        details={v.details}
-                                                                        publisher={v.publisher}
-                                                                        issuer={v.issuer}
-                                                                        status={v.status}
-                                                                    />
-                                                                    <Slide left duration={2000}>
-                                                                        <div
-                                                                            className={
-                                                                                classes.projectBorder
+                                                        {value && !expanded && (
+                                                            <Typography
+                                                                key={key + '-' + index + '-sub'}
+                                                            >
+                                                                {getAllName(
+                                                                    AccomplishmentsDetails
+                                                                        .accomplishments[key]
+                                                                )}
+                                                            </Typography>
+                                                        )}
+                                                    </div>
+                                                </AccordionSummary>
+                                                <AccordionDetails
+                                                    key={key + '-' + index + '-details'}
+                                                >
+                                                    <div
+                                                        className={classes.accomplishmentsLists}
+                                                        key={key + '-' + index + '-lists'}
+                                                    >
+                                                        {value &&
+                                                            value.map((v, valueIndex) => {
+                                                                return (
+                                                                    <div
+                                                                        className={
+                                                                            classes.accomplishmentsListItem
+                                                                        }
+                                                                        key={key + '-' + valueIndex}
+                                                                    >
+                                                                        <AccomplishmentCard
+                                                                            key={
+                                                                                key +
+                                                                                '-' +
+                                                                                valueIndex
                                                                             }
-                                                                        ></div>
-                                                                    </Slide>
-                                                                </div>
-                                                            )
-                                                        })}
-                                                </div>
-                                            </AccordionDetails>
-                                        </Accordion>
+                                                                            name={v.name}
+                                                                            date={v.date}
+                                                                            url={v.url}
+                                                                            details={v.details}
+                                                                            publisher={v.publisher}
+                                                                            issuer={v.issuer}
+                                                                            status={v.status}
+                                                                        />
+                                                                        <Slide
+                                                                            left
+                                                                            duration={2000}
+                                                                            key={
+                                                                                key +
+                                                                                '-' +
+                                                                                valueIndex +
+                                                                                '-slide'
+                                                                            }
+                                                                        >
+                                                                            <div
+                                                                                className={
+                                                                                    classes.projectBorder
+                                                                                }
+                                                                                key={
+                                                                                    key +
+                                                                                    '-' +
+                                                                                    valueIndex +
+                                                                                    '-slide'
+                                                                                }
+                                                                            ></div>
+                                                                        </Slide>
+                                                                    </div>
+                                                                )
+                                                            })}
+                                                    </div>
+                                                </AccordionDetails>
+                                            </Accordion>
+                                        )}
                                     </div>
                                 )
                             }

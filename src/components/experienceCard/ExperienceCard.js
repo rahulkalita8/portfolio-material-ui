@@ -1,14 +1,21 @@
-import { Card, CardContent, CardMedia, Typography } from '@material-ui/core'
-import Timeline from '@material-ui/lab/Timeline'
-import TimelineItem from '@material-ui/lab/TimelineItem'
-import TimelineSeparator from '@material-ui/lab/TimelineSeparator'
-import TimelineConnector from '@material-ui/lab/TimelineConnector'
-import TimelineContent from '@material-ui/lab/TimelineContent'
-import TimelineDot from '@material-ui/lab/TimelineDot'
-import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import React from 'react'
-import theme from './ExperienceCardStyle'
 import Fade from 'react-reveal/Fade'
+
+//MaterialUI
+import { Card, CardContent, CardMedia, Typography } from '@material-ui/core'
+import {
+    Timeline,
+    TimelineItem,
+    TimelineSeparator,
+    TimelineConnector,
+    TimelineContent,
+    TimelineDot,
+} from '@material-ui/lab'
+import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+
+//JSS
+import theme from './ExperienceCardStyle'
+
 const useStyles = makeStyles(theme)
 
 const Theme = createMuiTheme({
@@ -42,10 +49,13 @@ export default function ExperienceCard(props) {
                         <Timeline>
                             {props.allDetails.map((m, index) => {
                                 return (
-                                    <Fade right duration={1000}>
-                                        <TimelineItem>
-                                            <TimelineSeparator>
-                                                <TimelineDot color="primary" />
+                                    <Fade right duration={1000} key={props.name + index}>
+                                        <TimelineItem key={props.name + index}>
+                                            <TimelineSeparator key={props.name + index}>
+                                                <TimelineDot
+                                                    key={props.name + index}
+                                                    color="primary"
+                                                />
                                                 <TimelineConnector />
                                             </TimelineSeparator>
                                             <TimelineContent>
@@ -59,14 +69,24 @@ export default function ExperienceCard(props) {
                                                 >
                                                     <CardContent
                                                         className={classes.experienceCardContent}
+                                                        key={props.name + index}
                                                     >
-                                                        <Typography className={classes.role}>
+                                                        <Typography
+                                                            className={classes.role}
+                                                            key={props.name + index + 'role'}
+                                                        >
                                                             {m.role}
                                                         </Typography>
-                                                        <Typography className={classes.timeline}>
+                                                        <Typography
+                                                            className={classes.timeline}
+                                                            key={props.name + index + 'timeline'}
+                                                        >
                                                             {m.timeline}
                                                         </Typography>
-                                                        <Typography className={classes.details}>
+                                                        <Typography
+                                                            className={classes.details}
+                                                            key={props.name + index + 'desc'}
+                                                        >
                                                             {m.description}
                                                         </Typography>
                                                     </CardContent>

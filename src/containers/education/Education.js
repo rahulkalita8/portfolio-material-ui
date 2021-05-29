@@ -1,9 +1,14 @@
-import { makeStyles } from '@material-ui/core/styles'
 import React from 'react'
-import { Paper, Typography } from '@material-ui/core'
+
+//MaterialUI
+import { Typography } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
+
+//Local Component
 import EducationCard from '../../components/educationCard/EducationCard'
 import { EducationDetails } from '../../profileDetails'
 
+//JSS
 import theme from './EducationStyle'
 
 const useStyles = makeStyles(theme)
@@ -12,16 +17,15 @@ export default function Education() {
     const classes = useStyles()
 
     return (
-        <div className={classes.educationRoot} id="Education">
+        <div id="education">
             {EducationDetails.enable && (
-                <div>
-                    <Typography className={classes.educationRootLabel}>
-                        Education
-                    </Typography>
+                <div className={classes.educationRoot}>
+                    <Typography className={classes.educationRootLabel}>Education</Typography>
                     <div className={classes.educationLists}>
-                        {EducationDetails.schools.map((school) => {
+                        {EducationDetails.schools.map((school, index) => {
                             return (
                                 <EducationCard
+                                    key={'education-' + index}
                                     imageUrl={school.imageUrl}
                                     imageTitle={school.imageTitle}
                                     name={school.name}

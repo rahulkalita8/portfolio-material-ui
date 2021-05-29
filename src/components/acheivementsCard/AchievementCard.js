@@ -1,7 +1,11 @@
 import React from 'react'
+
+//MaterialUI
 import { makeStyles } from '@material-ui/core/styles'
-import theme from './AchievementCardStyle'
 import { Card, CardContent, CardMedia, Typography, Button } from '@material-ui/core'
+
+//JSS
+import theme from './AchievementCardStyle'
 
 const useStyles = makeStyles(theme)
 
@@ -26,20 +30,21 @@ export default function AchievementCard(props) {
                         <Typography className={classes.name}>{props.name}</Typography>
                         <Typography className={classes.date}>{props.date}</Typography>
                         <Typography className={classes.details}>{props.details}</Typography>
-                        {props.usefulLinks.map((link) => {
-                            return (
-                                <Button
-                                    color="primary"
-                                    href={link.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={classes.achievementButton}
-                                >
-                                    {link.name}
-                                </Button>
-                            )
-                        })}
                     </CardContent>
+                    {props.usefulLinks.map((link, index) => {
+                        return (
+                            <Button
+                                color="primary"
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={classes.achievementButton}
+                                key={'achievements-' + index + '-btn'}
+                            >
+                                {link.name}
+                            </Button>
+                        )
+                    })}
                 </div>
             </Card>
         </div>
