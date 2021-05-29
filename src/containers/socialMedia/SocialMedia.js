@@ -1,5 +1,6 @@
 import React from 'react'
 
+//FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faGoogle,
@@ -12,39 +13,16 @@ import {
     faTwitch,
     faStackOverflow,
 } from '@fortawesome/free-brands-svg-icons'
-import { makeStyles } from '@material-ui/styles'
+
+import { makeStyles } from '@material-ui/core/styles'
+
+//Local Component
 import { SocialMediaDetails } from '../../profileDetails'
 
-const useStyles = makeStyles({
-    socialMediaRoot: {
-        padding: '5px',
-        marginTop: '10px',
-        backgroundColor: 'transparent',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexWrap: 'wrap',
-    },
-    button: {
-        color: 'white',
-        padding: '0.5rem',
-        borderRadius: '50%',
-        cursor: 'pointer',
-        fontSize: '2rem',
-        minWidth: '2rem',
-        // maxWidth: '4rem',
-        margin: '0.5rem',
-        // fontSize: '2rem',
-        // lineHeight: '2.6rem',
-        // margin: '0 5px',
-        // marginBottom: '10px',
-        // textAlign: 'center',
-        // width: '2.6rem',
-        // marginBottom: '10px',
-        flexGrow: 1,
-        transition: '0.2s ease-in',
-    },
-})
+//JSS
+import theme from './SocialMediaStyle'
+
+const useStyles = makeStyles(theme)
 
 function getEnabledSocialMedia() {
     let socialMediaDict = {}
@@ -54,7 +32,7 @@ function getEnabledSocialMedia() {
     return socialMediaDict
 }
 
-export function SocialMedia() {
+export function SocialMedia(props) {
     const classes = useStyles()
 
     const socialMediaDict = getEnabledSocialMedia()
