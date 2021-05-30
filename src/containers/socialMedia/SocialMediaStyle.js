@@ -4,8 +4,8 @@ export default (theme) => ({
         marginTop: '10px',
         backgroundColor: 'transparent',
         display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: 'flex-start',
+        justifyContent: 'flex-start',
         flexWrap: 'wrap',
     },
     button: {
@@ -18,9 +18,5 @@ export default (theme) => ({
         margin: '0.5rem',
         flexGrow: 1,
         transition: '0.2s ease-in',
-        [theme.breakpoints.up('md')]: {
-            fontSize: '3rem',
-            minWidth: '3rem',
-        },
     },
 })

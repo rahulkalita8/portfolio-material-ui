@@ -1,7 +1,8 @@
 import React from 'react'
+import Slide from 'react-reveal'
 
 //Material-UI
-import { Button, Link, Typography } from '@material-ui/core'
+import { Link, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
 //Local Components
@@ -18,20 +19,24 @@ export default function AboutCard(props) {
 
     return (
         <div className={classes.aboutMain} id="about">
-            <div className={classes.aboutDetails}>
-                <Typography className={classes.aboutDetailsPara}>Hi there, I am</Typography>
-                <Typography className={classes.name}>{AboutDetails.name}</Typography>
-                <Typography className={classes.aboutDetailsPara}>{AboutDetails.about}</Typography>
-                <SocialMedia />
-                <Link
-                    href={AboutDetails.resumeURL}
-                    underline="none"
-                    target="_blank"
-                    className={classes.resumeBtn}
-                >
-                    Resume
-                </Link>
-            </div>
+            <Slide duration={500} left>
+                <div className={classes.aboutDetails}>
+                    <Typography className={classes.aboutDetailsPara}>Hi there, I am</Typography>
+                    <Typography className={classes.name}>{AboutDetails.name}</Typography>
+                    <Typography className={classes.aboutDetailsPara}>
+                        {AboutDetails.about}
+                    </Typography>
+                    <SocialMedia />
+                    <Link
+                        href={AboutDetails.resumeURL}
+                        underline="none"
+                        target="_blank"
+                        className={classes.resumeBtn}
+                    >
+                        Resume
+                    </Link>
+                </div>
+            </Slide>
         </div>
     )
 }

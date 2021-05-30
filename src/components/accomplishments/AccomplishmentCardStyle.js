@@ -67,6 +67,7 @@ export default (theme) => ({
     issuer: {
         fontSize: '0.8rem',
         fontFamily: 'Montserrat',
+        fontWeight: 'bold',
         [theme.breakpoints.up('md')]: {
             fontSize: '1rem',
         },

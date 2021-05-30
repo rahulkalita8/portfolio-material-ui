@@ -12,7 +12,7 @@ import {
     Typography,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import ArrowRightIcon from '@material-ui/icons/ArrowRight'
+import DoneIcon from '@material-ui/icons/Done'
 
 //JSS
 import theme from './EducationCardStyle'
@@ -47,7 +47,7 @@ export default function EducationCard(props) {
                                                 className={classes.listItems}
                                             >
                                                 <ListItemIcon className={classes.listIcon}>
-                                                    <ArrowRightIcon />
+                                                    <DoneIcon />
                                                 </ListItemIcon>
                                                 <Typography className={classes.details}>
                                                     {m}

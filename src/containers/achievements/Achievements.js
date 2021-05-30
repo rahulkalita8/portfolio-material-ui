@@ -18,7 +18,7 @@ export default function Achievement() {
     const classes = useStyles()
 
     return (
-        <div id="achievements">
+        <div id="certificates">
             <Fade left duration={1000}>
                 {AcheivementDetails.enable && (
                     <div className={classes.achievementRoot}>
