@@ -2,7 +2,7 @@ export default (theme) => ({
     aboutMain: {
         width: '100vw',
         height: '100vh',
-        backgroundImage: 'url(/assets/images/about-background4.jpg)',
+        backgroundImage: 'url(/assets/images/about-background.jpg)',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',

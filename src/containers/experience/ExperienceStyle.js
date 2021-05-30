@@ -2,7 +2,7 @@ export default (theme) => ({
     experienceRoot: {
         padding: '2rem',
         backgroundImage:
-            'linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(/assets/images/about-background3.jpg)',
+            'linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(/assets/images/experience-background.jpg)',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
