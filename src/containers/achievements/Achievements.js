@@ -23,7 +23,7 @@ export default function Achievement() {
                 {AcheivementDetails.enable && (
                     <div className={classes.achievementRoot}>
                         <Typography className={classes.achievementRootLabel}>
-                            Achievements
+                            Certificates
                         </Typography>
                         <div className={classes.achievementLists}>
                             {AcheivementDetails.acheivements.map((achievement, index) => {

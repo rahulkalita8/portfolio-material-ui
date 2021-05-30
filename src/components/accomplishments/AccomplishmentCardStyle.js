@@ -53,7 +53,7 @@ export default (theme) => ({
         fontWeight: 'bold',
         fontFamily: 'Montserrat',
         [theme.breakpoints.up('md')]: {
-            fontSize: '2rem',
+            fontSize: '1.5rem',
         },
     },
     date: {
@@ -61,31 +61,39 @@ export default (theme) => ({
         fontWeight: 'bold',
         fontFamily: 'Montserrat',
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.2rem',
+            fontSize: '1rem',
         },
     },
     issuer: {
         fontSize: '0.8rem',
         fontFamily: 'Montserrat',
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.2rem',
+            fontSize: '1rem',
         },
     },
     details: {
         fontSize: '0.8rem',
         fontFamily: 'Montserrat',
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.2rem',
+            fontSize: '1rem',
         },
     },
     accomplishmentButton: {
-        background: 'transparent',
-        margin: '0.5rem',
-        borderRadius: '8px',
-        border: '2px solid #3d5afe',
+        marginTop: '0.5rem',
+        padding: '0.2rem 0.5rem',
+        textAlign: 'center',
+        borderRadius: '20px',
+        color: '#2295ba',
+        background: '#ffffff',
+        border: '2px solid #2295ba',
+        fontSize: '0.8rem',
+        fontWeight: 'bold',
+        cursor: 'pointer',
+        transition: 'all 0.25s ease',
         '&:hover': {
-            background: '#3d5afe',
             color: '#ffffff',
+            background: '#2295ba',
+            border: '2px solid #ffffff',
         },
     },
 })

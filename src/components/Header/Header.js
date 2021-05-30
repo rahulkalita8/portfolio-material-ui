@@ -41,7 +41,7 @@ function getAllEnabled() {
     enabledComponent['experiences'] = WorkExperienceDetails.enable
         ? WorkExperienceDetails.enable
         : false
-    enabledComponent['achievements'] = AcheivementDetails.enable ? AcheivementDetails.enable : false
+    enabledComponent['certificates'] = AcheivementDetails.enable ? AcheivementDetails.enable : false
     enabledComponent['accomplishments'] = AccomplishmentsDetails.enable
         ? AccomplishmentsDetails.enable
         : false

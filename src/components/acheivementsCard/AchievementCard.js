@@ -28,23 +28,25 @@ export default function AchievementCard(props) {
                             {props.organization}
                         </Typography>
                         <Typography className={classes.name}>{props.name}</Typography>
-                        <Typography className={classes.date}>{props.date}</Typography>
+                        <Typography className={classes.date}>{'(' + props.date + ')'}</Typography>
                         <Typography className={classes.details}>{props.details}</Typography>
                     </CardContent>
-                    {props.usefulLinks.map((link, index) => {
-                        return (
-                            <Button
-                                color="primary"
-                                href={link.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={classes.achievementButton}
-                                key={'achievements-' + index + '-btn'}
-                            >
-                                {link.name}
-                            </Button>
-                        )
-                    })}
+                    <div>
+                        {props.usefulLinks.map((link, index) => {
+                            return (
+                                <Button
+                                    color="primary"
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={classes.achievementButton}
+                                    key={'achievements-' + index + '-btn'}
+                                >
+                                    {link.name}
+                                </Button>
+                            )
+                        })}
+                    </div>
                 </div>
             </Card>
         </div>

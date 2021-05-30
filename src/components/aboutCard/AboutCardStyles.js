@@ -10,13 +10,16 @@ export default (theme) => ({
     },
     aboutDetails: {
         height: '100vh',
-        margin: 'auto',
+        margin: '0 20px',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         justifyContent: 'center',
         flexBasis: '0',
         flexGrow: '1',
+        [theme.breakpoints.up('md')]: {
+            margin: '0 100px',
+        },
     },
     main__animation: {
         minWidth: '300px',
@@ -24,22 +27,42 @@ export default (theme) => ({
         flexGrow: '1',
     },
 
-    typographyH1: {
+    name: {
         paddingBottom: '1rem',
+        color: '#207ed6',
         fontSize: '3rem',
+        fontWeight: 'bold',
         fontFamily: 'Montserrat',
         [theme.breakpoints.up('md')]: {
             fontSize: '5rem',
         },
     },
 
-    typographyBody1: {
-        margin: '0',
-        padding: '0 1rem',
+    aboutDetailsPara: {
+        maxWidth: '50vw',
         fontSize: '1rem',
+        textAlign: 'left',
         fontFamily: 'Montserrat',
         [theme.breakpoints.up('md')]: {
             fontSize: '2rem',
+        },
+    },
+
+    resumeBtn: {
+        padding: '0.8rem 2rem',
+        textAlign: 'center',
+        borderRadius: '40px',
+        color: '#2295ba',
+        background: '#ffffff',
+        border: '2px solid #2295ba',
+        fontSize: '1rem',
+        fontWeight: 'bold',
+        cursor: 'pointer',
+        transition: 'all 0.25s ease',
+        '&:hover': {
+            color: '#ffffff',
+            background: '#2295ba',
+            border: '2px solid #ffffff',
         },
     },
 })
